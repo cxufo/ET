@@ -1,0 +1,213 @@
+@CHARSET "UTF-8";
+
+body,div,ul,li,h1,h2,h3,h4,h5,h6,hr,p,button,input,textarea,dl,dd {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 13px;
+	font-family: "Î¢ÈíÑÅºÚ";
+	background: url(http://icon.58pic.com/images/show/register/login_bg.jpg)
+		repeat;
+}
+
+li {
+	list-style: none;
+}
+
+img {
+	border: none;
+}
+
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	_overflow: auto;
+	_height: auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+/**/
+#box {
+	width: 436px;
+	height: 782px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#wrap {
+	background: url(http://icon.58pic.com/images/show/register/wrap.png)
+		no-repeat;
+	width: 436px;
+	height: 782px;
+	margin: 0 auto;
+	padding-top:100px;
+	position: absolute;
+	top: 0;
+	/* 
+_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/wrap.png'); /* IE6 */
+	/* _ background-image: none; IE6 */
+}
+
+#logo {
+	text-align: center;
+	padding: 20px 0 0 0;
+	height: 104px;
+	overflow: hidden;
+}
+
+#reg_box,#login_box {
+	z-index: 2;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+.fl {
+	float: left;
+}
+
+.none {
+	display: none;
+}
+
+.relative {
+	position: relative;
+}
+
+.leftflag {
+	width: 107px;
+	height: 72px;
+	line-height: 69px;
+	position: absolute;
+	left: -89px;
+	display: block;
+}
+
+.leftflag span {
+	padding-left: 50px;
+	font-size: 18px;
+	color: #FFFFFF;
+}
+
+.b_flag {
+	background: url(http://icon.58pic.com/images/show/register/t4.png)
+		no-repeat;
+}
+
+.c_flag {
+	background: url(http://icon.58pic.com/images/show/register/t3.png)
+		no-repeat;
+}
+
+#login {
+	top: 179px;
+}
+
+#logo a {
+	width: 160px;
+	height: 50px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 25px;
+}
+
+a.reg_disable {
+	background: url(http://icon.58pic.com/images/show/register/reg_g.png)
+		no-repeat;
+	width: 268px;
+	height: 52px;
+	display: block;
+	margin: 5px auto 10px;
+}
+
+a.reg_able {
+	background: url(http://icon.58pic.com/images/show/register/reg.png)
+		no-repeat;
+	width: 268px;
+	height: 52px;
+	display: block;
+	margin: 5px auto 10px;
+}
+
+a.reg_able:hover {
+	background:
+		url(http://icon.58pic.com/images/show/register/reg_hover.png)
+		no-repeat;
+}
+
+a.reg_able:active {
+	background:
+		url(http://icon.58pic.com/images/show/register/reg_active.png)
+		no-repeat;
+}
+
+.login_disable {
+	background: url(http://icon.58pic.com/images/show/register/login_g.png)
+		no-repeat;
+	width: 268px;
+	height: 52px;
+	display: block;
+	margin: 5px auto 10px;
+}
+
+.input_ul li {
+	background:
+		url(http://icon.58pic.com/images/show/register/inputbox2.png)
+		no-repeat;
+	height: 60px;
+	margin: 0 0 0 85px;
+}
+
+.inputbox,.hideinput {
+	width: 205px;
+	height: 33px;
+	margin: 6px 0 0 45px;
+	border: 0;
+	line-height: 33px;
+	padding: 0 5px;
+	font-family: "Î¢ÈíÑÅºÚ";
+	font-size: 16px;
+}
+
+#div1 {
+	background:
+		url(http://icon.58pic.com/images/show/register/ooopic_1353400705.png)
+		no-repeat 17px center;
+	height: 45px;
+	width: 290px;
+}
+
+#div2,#div3 {
+	background:
+		url(http://icon.58pic.com/images/show/register/ooopic_1353400693.png)
+		no-repeat 17px center;
+	height: 45px;
+	width: 290px;
+}
+
+.org_style {
+	color: #CECECE;
+	font-size: 16px;
+}
+
+.tip {
+	width: 24px;
+	height: 45px;
+	float: left;
+}

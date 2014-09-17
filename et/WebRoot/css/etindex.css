@@ -1,0 +1,134 @@
+/*--------------------------导航栏--------------------------*/
+#i-div-top    /*顶部   首页导航栏*/
+{
+	background: black;
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+	height: 90px;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	z-index: 999;
+}
+
+#i-div-topContent    /*顶部   首页导航栏    内容块*/
+{
+	height: 90px;
+	width: 80px;
+	margin: 0 auto;
+	float:left;
+}
+
+#i-div-navigation   /*顶部  导航块*/
+{
+	float: right;
+	margin-right: 150px;
+}
+
+#i-ul-navigation    /*顶部   首页导航栏     导航*/
+{
+	text-align: right;
+}
+
+#i-ul-navigation li    /*顶部   首页导航栏     导航项*/
+{
+	display: inline-block;
+	width: 76px;
+	height: 80px;
+	text-align: left;
+	padding: 10px 20px 0px 20px;
+	float: left;
+}
+
+#i-ul-navigation li img   /*顶部   首页导航栏     导航项图片*/
+{
+	max-height: 35px;
+	max-width: 35px;
+}
+
+#i-ul-navigation a    /*顶部   首页导航栏     导航项*/
+{
+	color: white;
+	font: 18px/1.5 "楷体";
+	font-weight: bold;
+	display: block;
+}
+
+#i-ul-navigation a:hover   /*鼠标移动到  导航项  时的颜色 */
+{
+	color: #0D65FB;
+}
+
+/*--------------------------首页 主体内容--------------------------*/
+#i-div-mainContent   /*主要内容块*/
+{
+	overflow: hidden;
+}
+
+/*--------------------------首页主体  banner--------------------------*/
+#i-div-banner    /*banner块*/
+{
+	height: 840px;
+	position: relative;
+}
+
+#i-div-bannerBg     /*banner背景*/
+{
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 840px;
+	background-color: #F4F4F4;
+	z-index: 1;
+}
+
+#i-div-bannerBg ul    /*banner背景 ul*/
+{	
+	height: 840px;
+	display: block;
+	margin: auto;
+}
+
+#i-div-bannerBg li    /*banner背景以li列出*/
+{
+	height: 840px;
+	background-position: 50% 0;
+	width: 100%;
+	display: inline-block;
+}
+
+#i-div-bannerBottom    /*banner底部  白色透明背景*/
+{
+	height: 70px;
+	background: white;
+	position: relative;
+	z-index: 99;
+	bottom: 70px;
+	filter: alpha(opacity=75);
+	opacity: 0.75;
+}
+
+#i-ul-bannerBottom    /*banner底部  小按钮位置*/
+{
+	position: absolute;
+	left: 50%;
+	bottom: 27px;
+	z-index: 199;
+}
+
+#i-ul-bannerBottom li    /*banner底部  小按钮 图片*/
+{
+	float: left;
+	width: 16px;
+	height: 16px;
+	background-image: url(../image/icons/icons.png);
+	background-position: -257px -929px;
+	margin-right: 8px;	
+	cursor: pointer;
+}
+
+#i-ul-bannerBottom .active    /*banner底部 当前  小按钮*/
+{
+	background-position: -280px -929px;
+}
+
