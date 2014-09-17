@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+<class name="com.etwebservice.domain.Team" table="team">
+      <id name="memberId" column="memberId" type="int">
+      	<generator class="native"/>
+      </id>
+      <property name="name" column="name" type="string"></property>
+      <property name="sign" column="sign" type="string"></property>
+      <property name="job" column="job" type="string"></property>
+      <property name="detail" column="detail" type="string"></property>
+      <property name="image" column="image" type="string"></property>
+  </class>
+</hibernate-mapping>

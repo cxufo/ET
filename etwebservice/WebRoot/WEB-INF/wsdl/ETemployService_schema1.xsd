@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://service.webservice.etwebservice.com/" targetNamespace="http://service.webservice.etwebservice.com/" version="1.0">
+
+  <xs:element name="deleteEmploy" type="tns:deleteEmploy"/>
+
+  <xs:element name="deleteEmployResponse" type="tns:deleteEmployResponse"/>
+
+  <xs:element name="getEmploy" type="tns:getEmploy"/>
+
+  <xs:element name="getEmployAll" type="tns:getEmployAll"/>
+
+  <xs:element name="getEmployAllResponse" type="tns:getEmployAllResponse"/>
+
+  <xs:element name="getEmployById" type="tns:getEmployById"/>
+
+  <xs:element name="getEmployByIdResponse" type="tns:getEmployByIdResponse"/>
+
+  <xs:element name="getEmployResponse" type="tns:getEmployResponse"/>
+
+  <xs:element name="insertEmploy" type="tns:insertEmploy"/>
+
+  <xs:element name="insertEmployResponse" type="tns:insertEmployResponse"/>
+
+  <xs:element name="updateEmploy" type="tns:updateEmploy"/>
+
+  <xs:element name="updateEmployResponse" type="tns:updateEmployResponse"/>
+
+  <xs:complexType name="getEmployAll">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element name="arg1" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getEmployAllResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="insertEmploy">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:employ"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="employ">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="adress" type="xs:string"/>
+      <xs:element name="count" type="xs:int"/>
+      <xs:element minOccurs="0" name="date" type="xs:string"/>
+      <xs:element minOccurs="0" name="detail" type="xs:string"/>
+      <xs:element minOccurs="0" name="educational" type="xs:string"/>
+      <xs:element name="employId" type="xs:int"/>
+      <xs:element minOccurs="0" name="job" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="insertEmployResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteEmploy">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:employ"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteEmployResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getEmploy">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element name="arg1" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getEmployResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateEmploy">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:employ"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateEmployResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getEmployById">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getEmployByIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:employ"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

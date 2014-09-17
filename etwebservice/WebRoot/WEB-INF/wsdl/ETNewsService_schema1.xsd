@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://service.webservice.etwebservice.com/" targetNamespace="http://service.webservice.etwebservice.com/" version="1.0">
+
+  <xs:element name="deleteNews" type="tns:deleteNews"/>
+
+  <xs:element name="deleteNewsResponse" type="tns:deleteNewsResponse"/>
+
+  <xs:element name="insertNews" type="tns:insertNews"/>
+
+  <xs:element name="insertNewsResponse" type="tns:insertNewsResponse"/>
+
+  <xs:element name="queryNewsContentById" type="tns:queryNewsContentById"/>
+
+  <xs:element name="queryNewsContentByIdResponse" type="tns:queryNewsContentByIdResponse"/>
+
+  <xs:element name="queryNewsContentByTitle" type="tns:queryNewsContentByTitle"/>
+
+  <xs:element name="queryNewsContentByTitleResponse" type="tns:queryNewsContentByTitleResponse"/>
+
+  <xs:element name="queryTitle" type="tns:queryTitle"/>
+
+  <xs:element name="queryTitleResponse" type="tns:queryTitleResponse"/>
+
+  <xs:element name="updateNewsContent" type="tns:updateNewsContent"/>
+
+  <xs:element name="updateNewsContentResponse" type="tns:updateNewsContentResponse"/>
+
+  <xs:element name="updateTitle" type="tns:updateTitle"/>
+
+  <xs:element name="updateTitleResponse" type="tns:updateTitleResponse"/>
+
+  <xs:complexType name="insertNews">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:news"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="news">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="newsContent" type="xs:string"/>
+      <xs:element name="newsId" type="xs:int"/>
+      <xs:element minOccurs="0" name="newsTime" type="xs:string"/>
+      <xs:element minOccurs="0" name="newsTitle" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="insertNewsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateNewsContent">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateNewsContentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="queryNewsContentByTitle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="queryNewsContentByTitleResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:news"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteNews">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:news"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteNewsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="queryTitle">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element name="arg1" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="queryTitleResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateTitle">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateTitleResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="queryNewsContentById">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="queryNewsContentByIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:news"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

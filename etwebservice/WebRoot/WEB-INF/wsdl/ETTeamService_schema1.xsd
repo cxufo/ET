@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://service.webservice.etwebservice.com/" targetNamespace="http://service.webservice.etwebservice.com/" version="1.0">
+
+  <xs:element name="deleteTeamMember" type="tns:deleteTeamMember"/>
+
+  <xs:element name="deleteTeamMemberResponse" type="tns:deleteTeamMemberResponse"/>
+
+  <xs:element name="getTeam" type="tns:getTeam"/>
+
+  <xs:element name="getTeamAllinfo" type="tns:getTeamAllinfo"/>
+
+  <xs:element name="getTeamAllinfoResponse" type="tns:getTeamAllinfoResponse"/>
+
+  <xs:element name="getTeamById" type="tns:getTeamById"/>
+
+  <xs:element name="getTeamByIdResponse" type="tns:getTeamByIdResponse"/>
+
+  <xs:element name="getTeamByName" type="tns:getTeamByName"/>
+
+  <xs:element name="getTeamByNameResponse" type="tns:getTeamByNameResponse"/>
+
+  <xs:element name="getTeamResponse" type="tns:getTeamResponse"/>
+
+  <xs:element name="insertTeamMember" type="tns:insertTeamMember"/>
+
+  <xs:element name="insertTeamMemberResponse" type="tns:insertTeamMemberResponse"/>
+
+  <xs:element name="updateImage" type="tns:updateImage"/>
+
+  <xs:element name="updateImageResponse" type="tns:updateImageResponse"/>
+
+  <xs:element name="updateTeam" type="tns:updateTeam"/>
+
+  <xs:element name="updateTeamDetail" type="tns:updateTeamDetail"/>
+
+  <xs:element name="updateTeamDetailResponse" type="tns:updateTeamDetailResponse"/>
+
+  <xs:element name="updateTeamJob" type="tns:updateTeamJob"/>
+
+  <xs:element name="updateTeamJobResponse" type="tns:updateTeamJobResponse"/>
+
+  <xs:element name="updateTeamName" type="tns:updateTeamName"/>
+
+  <xs:element name="updateTeamNameResponse" type="tns:updateTeamNameResponse"/>
+
+  <xs:element name="updateTeamResponse" type="tns:updateTeamResponse"/>
+
+  <xs:element name="updateTeamSign" type="tns:updateTeamSign"/>
+
+  <xs:element name="updateTeamSignResponse" type="tns:updateTeamSignResponse"/>
+
+  <xs:complexType name="updateTeamJob">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateTeamJobResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateTeam">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:team"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="team">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="detail" type="xs:string"/>
+      <xs:element minOccurs="0" name="image" type="xs:string"/>
+      <xs:element minOccurs="0" name="job" type="xs:string"/>
+      <xs:element name="memberId" type="xs:int"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+      <xs:element minOccurs="0" name="sign" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateTeamResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getTeam">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element name="arg1" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getTeamResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateTeamName">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateTeamNameResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateTeamSign">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateTeamSignResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getTeamAllinfo">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element name="arg1" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getTeamAllinfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteTeamMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:team"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteTeamMemberResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateImage">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateImageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateTeamDetail">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateTeamDetailResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getTeamByName">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getTeamByNameResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:team"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getTeamById">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getTeamByIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:team"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="insertTeamMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:team"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="insertTeamMemberResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

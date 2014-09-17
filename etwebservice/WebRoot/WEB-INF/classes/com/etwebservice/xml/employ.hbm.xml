@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+<class name="com.etwebservice.domain.Employ" table="employ">
+      <id name="employId" column="employId" type="int">
+      	<generator class="native"/>
+      </id>
+      <property name="job" column="job" type="string"></property>
+      <property name="educational" column="educational" type="string"></property>
+      <property name="adress" column="adress" type="string"></property>
+      <property name="date" column="date" type="string"></property>
+      <property name="count" column="count" type="int"></property>
+      <property name="detail" column="detail" type="string"></property>
+  </class>
+</hibernate-mapping>

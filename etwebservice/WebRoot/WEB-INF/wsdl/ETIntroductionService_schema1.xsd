@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://service.webservice.etwebservice.com/" targetNamespace="http://service.webservice.etwebservice.com/" version="1.0">
+
+  <xs:element name="deleteIntro" type="tns:deleteIntro"/>
+
+  <xs:element name="deleteIntroResponse" type="tns:deleteIntroResponse"/>
+
+  <xs:element name="getAllIntroduction" type="tns:getAllIntroduction"/>
+
+  <xs:element name="getAllIntroductionResponse" type="tns:getAllIntroductionResponse"/>
+
+  <xs:element name="getIntroIdNameImage" type="tns:getIntroIdNameImage"/>
+
+  <xs:element name="getIntroIdNameImageResponse" type="tns:getIntroIdNameImageResponse"/>
+
+  <xs:element name="getIntroductionById" type="tns:getIntroductionById"/>
+
+  <xs:element name="getIntroductionByIdResponse" type="tns:getIntroductionByIdResponse"/>
+
+  <xs:element name="getIntroductionByName" type="tns:getIntroductionByName"/>
+
+  <xs:element name="getIntroductionByNameResponse" type="tns:getIntroductionByNameResponse"/>
+
+  <xs:element name="insertIntro" type="tns:insertIntro"/>
+
+  <xs:element name="insertIntroResponse" type="tns:insertIntroResponse"/>
+
+  <xs:element name="updateIntro" type="tns:updateIntro"/>
+
+  <xs:element name="updateIntroResponse" type="tns:updateIntroResponse"/>
+
+  <xs:complexType name="getIntroductionByName">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getIntroductionByNameResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getIntroductionById">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getIntroductionByIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAllIntroduction">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element name="arg1" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAllIntroductionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteIntro">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:introduction"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="introduction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="detail" type="xs:string"/>
+      <xs:element minOccurs="0" name="image" type="xs:string"/>
+      <xs:element name="introId" type="xs:int"/>
+      <xs:element minOccurs="0" name="introItem" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteIntroResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateIntro">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:introduction"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateIntroResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="insertIntro">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:introduction"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="insertIntroResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getIntroIdNameImage">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element name="arg1" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getIntroIdNameImageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://service.webservice.etwebservice.com/" targetNamespace="http://service.webservice.etwebservice.com/" version="1.0">
+
+  <xs:element name="getContact" type="tns:getContact"/>
+
+  <xs:element name="getContactResponse" type="tns:getContactResponse"/>
+
+  <xs:element name="insertContact" type="tns:insertContact"/>
+
+  <xs:element name="insertContactResponse" type="tns:insertContactResponse"/>
+
+  <xs:element name="update" type="tns:update"/>
+
+  <xs:element name="updateResponse" type="tns:updateResponse"/>
+
+  <xs:complexType name="update">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:contact"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="contact">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="adress" type="xs:string"/>
+      <xs:element name="contactId" type="xs:int"/>
+      <xs:element minOccurs="0" name="email" type="xs:string"/>
+      <xs:element minOccurs="0" name="fax" type="xs:string"/>
+      <xs:element minOccurs="0" name="phoneNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="qq" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="insertContact">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:contact"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="insertContactResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getContact">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getContactResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

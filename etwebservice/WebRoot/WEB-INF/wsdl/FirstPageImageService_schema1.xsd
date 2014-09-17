@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://service.webservice.etwebservice.com/" targetNamespace="http://service.webservice.etwebservice.com/" version="1.0">
+
+  <xs:element name="deleteImage" type="tns:deleteImage"/>
+
+  <xs:element name="deleteImageResponse" type="tns:deleteImageResponse"/>
+
+  <xs:element name="getImages" type="tns:getImages"/>
+
+  <xs:element name="getImagesResponse" type="tns:getImagesResponse"/>
+
+  <xs:element name="insertImage" type="tns:insertImage"/>
+
+  <xs:element name="insertImageResponse" type="tns:insertImageResponse"/>
+
+  <xs:element name="updateImage" type="tns:updateImage"/>
+
+  <xs:element name="updateImageResponse" type="tns:updateImageResponse"/>
+
+  <xs:complexType name="updateImage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:firstPage"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="firstPage">
+    <xs:sequence>
+      <xs:element name="fimageId" type="xs:int"/>
+      <xs:element minOccurs="0" name="fImage" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateImageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="insertImage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:firstPage"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="insertImageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteImage">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteImageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getImages">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element name="arg1" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getImagesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,31 @@
+<?xml version = "1.0"?>
+<endpoints version="2.0"
+	xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime">
+	<endpoint name="ETIntroductionPort"
+		implementation="com.etwebservice.webservice.delegate.ETIntroductionDelegate"
+		url-pattern="/ETIntroductionPort">
+	</endpoint>
+	<endpoint name="ETNewsPort"
+		implementation="com.etwebservice.webservice.delegate.ETNewsDelegate"
+		url-pattern="/ETNewsPort">
+	</endpoint>
+	<endpoint name="FirstPageImagePort"
+		implementation="com.etwebservice.webservice.service.FirstPageImageDelegate"
+		url-pattern="/FirstPageImagePort">
+	</endpoint>
+	<endpoint name="ETTeamPort"
+		implementation="com.etwebservice.webservice.service.ETTeamDelegate"
+		url-pattern="/ETTeamPort">
+	</endpoint>
+	<endpoint name="ETContactPort"
+		implementation="com.etwebservice.webservice.service.ETContactDelegate"
+		url-pattern="/ETContactPort">
+	</endpoint>
+	<endpoint name="ETemployPort"
+		implementation="com.etwebservice.webservice.service.ETemployDelegate"
+		url-pattern="/ETemployPort">
+	</endpoint>
+	<endpoint name="ETServicePort"
+		implementation="com.etwebservice.webservice.service.ETServiceDelegate"
+		url-pattern="/ETServicePort">
+	</endpoint></endpoints>

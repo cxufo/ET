@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://service.webservice.etwebservice.com/" targetNamespace="http://service.webservice.etwebservice.com/" version="1.0">
+
+  <xs:element name="deleteService" type="tns:deleteService"/>
+
+  <xs:element name="deleteServiceResponse" type="tns:deleteServiceResponse"/>
+
+  <xs:element name="getService" type="tns:getService"/>
+
+  <xs:element name="getServiceAll" type="tns:getServiceAll"/>
+
+  <xs:element name="getServiceAllResponse" type="tns:getServiceAllResponse"/>
+
+  <xs:element name="getServiceById" type="tns:getServiceById"/>
+
+  <xs:element name="getServiceByIdResponse" type="tns:getServiceByIdResponse"/>
+
+  <xs:element name="getServiceByName" type="tns:getServiceByName"/>
+
+  <xs:element name="getServiceByNameResponse" type="tns:getServiceByNameResponse"/>
+
+  <xs:element name="getServiceResponse" type="tns:getServiceResponse"/>
+
+  <xs:element name="insertService" type="tns:insertService"/>
+
+  <xs:element name="insertServiceResponse" type="tns:insertServiceResponse"/>
+
+  <xs:element name="updateService" type="tns:updateService"/>
+
+  <xs:element name="updateServiceDetail" type="tns:updateServiceDetail"/>
+
+  <xs:element name="updateServiceDetailResponse" type="tns:updateServiceDetailResponse"/>
+
+  <xs:element name="updateServiceImage" type="tns:updateServiceImage"/>
+
+  <xs:element name="updateServiceImageResponse" type="tns:updateServiceImageResponse"/>
+
+  <xs:element name="updateServiceName" type="tns:updateServiceName"/>
+
+  <xs:element name="updateServiceNameResponse" type="tns:updateServiceNameResponse"/>
+
+  <xs:element name="updateServiceResponse" type="tns:updateServiceResponse"/>
+
+  <xs:complexType name="updateServiceImage">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateServiceImageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateServiceDetail">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateServiceDetailResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getService">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element name="arg1" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getServiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getServiceById">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getServiceByIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:service"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="service">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="detail" type="xs:string"/>
+      <xs:element minOccurs="0" name="image" type="xs:string"/>
+      <xs:element name="serviceId" type="xs:int"/>
+      <xs:element minOccurs="0" name="serviceName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteService">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:service"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteServiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getServiceByName">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getServiceByNameResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:service"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateServiceName">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateServiceNameResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getServiceAll">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element name="arg1" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getServiceAllResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateService">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:service"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateServiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="insertService">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:service"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="insertServiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

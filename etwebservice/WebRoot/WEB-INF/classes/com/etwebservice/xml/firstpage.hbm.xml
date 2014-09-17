@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+<class name="com.etwebservice.domain.FirstPage" table="firstpage">
+      <id name="fimageId" column="fImageId" type="int">
+      	<generator class="native"/>
+      </id>
+      <property name="fImage" column="fImage" type="string"></property>
+  </class>
+</hibernate-mapping>
