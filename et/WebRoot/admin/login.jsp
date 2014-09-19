@@ -50,11 +50,11 @@
 			href="http://www.58pic.com/denglu/" onfocus="this.blur();"><span>登录</span></a> <a
 			id="returnIndex" href="http://www.58pic.com/">&lt;&lt;返回首页</a> -->
 		<form name="loginform" id="loginform" method="post"
-			action="/et/admin/EditNew.jsp" target="main"
+			action="/et/admin/QueryNew.jsp" target="main"
 			onsubmit="return smtLogin();">
 			<div id="wrap" class="png">
 				<div id="logo" class="png">
-					<a href="/et/admin/EditNew.jsp" title="贵州ET官网后台管理中心"><img
+					<a href="/et/admin/QueryNew.jsp" title="贵州ET官网后台管理中心"><img
 						class="png" src="./image/ET504020140910141913.png" width="100%"
 						height="100%" alt="贵州ET" title="贵州ET"></a>
 				</div>
